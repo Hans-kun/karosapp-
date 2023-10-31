@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .bg-img{
+    background-image: url("././assets/adobestock_293068579\ 1.png");
+  } */
+
+  .button{
+    @apply w-[200px] h-10 rounded-[5px] px-5 py-[11.5px] text-smm 
+  }
+
+  .sidewords{
+  @apply p-[50px] my-[60px] mr-[26px]
+  }
+
+  .title{
+    @apply h-11 text-white font-semibold text-smalls md:text-mids xl:text-header mt-[100px] md:mt-[200px]
+  }
+
+  .title-underline{
+    @apply underline decoration-blue underline-offset-4
+  }
+
+  .skill-hover{
+    @apply hover:bg-white hover:rounded-[10px] hover:p-[10px] cursor-pointer hover:text-blue hover:text-3xl hover:font-semibold
+  }
