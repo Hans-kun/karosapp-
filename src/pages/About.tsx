@@ -58,9 +58,6 @@ function About() {
             initial='hidden'
             whileInView='show2'
             viewport={{ once: true }}
-            // initial={{ x: "200vh", opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{ delay: 2, type: "tween" }}
             className='w-full gap-y-5 flex flex-col break-words md:w-[600px] xl:w-[1000px] text-center md:text-left'
           >
             <h2 className='text-white font-semibold text-mid h -[72px]'>
@@ -77,16 +74,13 @@ function About() {
                 initial='hidden'
                 whileInView='show2'
                 viewport={{ once: true }}
-                // initial={{ x: "-200vh" }}
-                // animate={{ x: 0 }}
-                // transition={{ delay: 2.3 }}
                 className=' flex-col justify-center items-center gap-5 inline-flex'
               >
                 <div className='text-[50px] font-medium'>
                   <CountUp
                     start={0}
                     end={admin?.yearsOfExperience as number}
-                    delay={2.5}
+                    delay={2.8}
                     duration={5}
                   />
                   +
@@ -117,7 +111,7 @@ function About() {
                     start={0}
                     end={admin?.totalCoursesAndCertificates as number}
                     duration={5}
-                    delay={2.5}
+                    delay={2.8}
                   />
                   +
                 </div>

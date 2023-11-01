@@ -48,7 +48,7 @@ const Home: React.FC = () => {
               <span className='mb-[50px]'>You can call me Cyber Wraith</span>
             </div>
             <div className='flex flex-col md:flex-row gap-[20px] md:gap-[50px] text-smm'>
-              <button className='button bg-blue hover:bg-indigo-500'>
+              <button className='button bg-blue hover:bg-lblue'>
                 <a
                   href={admin?.resume}
                   download='Resume-PDF-document'

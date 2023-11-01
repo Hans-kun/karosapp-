@@ -12,7 +12,7 @@ const Navbar = () => {
   const { admin } = useAdminStore();
   const [colorChange, setColorChange] = useState(false);
   const [toggle, setToggle] = useState(true);
-  const [selectedPage, setSelectedPage] = useState("");
+  const [selectedPage, setSelectedPage] = useState("home");
   // const [open, setOpen] = useState(false);
 
   const changeNavColor = () => {
@@ -36,9 +36,7 @@ const Navbar = () => {
       >
         <img src={Logo} alt='logo' />
 
-        <ul
-          className={`flex justify-end gap-[50px] text-white items-center hover:cursor-pointer`}
-        >
+        <ul className={`flex justify-end gap-[50px] text-white items-center`}>
           <Link
             to={"home"}
             smooth={true}
@@ -48,7 +46,7 @@ const Navbar = () => {
             }}
             className={`${
               selectedPage == "home" ? "text-blue" : "text-white"
-            }  hover:text-blue `}
+            }  hover:text-blue hover:cursor-pointer`}
           >
             <li>Home</li>
           </Link>
@@ -58,7 +56,7 @@ const Navbar = () => {
             duration={500}
             className={`${
               selectedPage == "about" ? "text-blue" : "text-white"
-            }  hover:text-blue `}
+            }  hover:text-blue hover:cursor-pointer`}
             onClick={() => {
               setSelectedPage("about");
             }}
@@ -71,14 +69,17 @@ const Navbar = () => {
             duration={500}
             className={`${
               selectedPage == "contact" ? "text-blue" : "text-white"
-            }  hover:text-blue `}
+            }  hover:text-blue hover:cursor-pointer`}
             onClick={() => {
               setSelectedPage("contact");
             }}
           >
             <li>Contact</li>
           </Link>
-          <a href={admin?.blogUrl} className=' hover:text-blue '>
+          <a
+            href={admin?.blogUrl}
+            className=' hover:text-blue hover:cursor-pointer'
+          >
             <li>Blog</li>
           </a>
         </ul>
@@ -100,7 +101,7 @@ const Navbar = () => {
           variants={fadeIn("left", 0, 1)}
           initial='hidden'
           whileInView='show4'
-          className='lg:hidden h-screen absolute top-0 bottom-0 start-0 end-0 bg-black z-10'
+          className='lg:hidden fixed top-0 bottom-0 start-0 end-0 bg-black z-10'
         >
           <div className='lg:hidden flex justify-between align-center px-[30px] md:px-[50px] py-[10px]'>
             <img src={Logo} alt='logo' />
@@ -114,6 +115,9 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               onClick={() => setToggle(!toggle)}
+              className={`${
+                selectedPage == "contact" ? "text-blue" : "text-white"
+              }  hover:text-blue hover:cursor-pointer`}
             >
               <li>Home</li>
             </Link>
@@ -122,6 +126,9 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               onClick={() => setToggle(!toggle)}
+              className={`${
+                selectedPage == "contact" ? "text-blue" : "text-white"
+              }  hover:text-blue hover:cursor-pointer`}
             >
               <li>About</li>
             </Link>
@@ -130,10 +137,17 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               onClick={() => setToggle(!toggle)}
+              className={`${
+                selectedPage == "contact" ? "text-blue" : "text-white"
+              }  hover:text-blue hover:cursor-pointer`}
             >
               <li>Contact</li>
             </Link>
-            <a href={admin?.blogUrl} onClick={() => setToggle(!toggle)}>
+            <a
+              href={admin?.blogUrl}
+              onClick={() => setToggle(!toggle)}
+              className=' hover:text-blue hover:cursor-pointer'
+            >
               <li>Blog</li>
             </a>
           </ul>

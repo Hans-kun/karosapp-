@@ -14,6 +14,7 @@ export default {
       },
       colors: {
         blue: "#2F80ED",
+        lblue: '#467FCB',
         ash: "#6D7072"
       },
       fontSize: {
