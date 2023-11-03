@@ -27,87 +27,53 @@ const Home: React.FC = () => {
   return (
     <div className='bg-bg-img bg-no-repeat bg-cover conatiner w-full' id='home'>
       <div className='flex flex-col h-screen justify-center items-center'>
-        {admin !== undefined ? (
-          <div className='text-white md:top-[331px] flex flex-col gap-[30px] items-center'>
-            <div className='w-[209px] md:w-[700px] flex flex-col gap-5 items-center text-center'>
-              <span className='font-semibold text-2xl md:text-3xl '>
-                Hello!
-              </span>
-              <TypeAnimation
-                sequence={[
-                  `I'm ${admin?.name}`,
-                  2000,
-                  `I'm a ${admin?.profession}`,
-                  2000,
-                ]}
-                wrapper='span'
-                className='font-semibold text-2xl md:text-3xl'
-                speed={30}
-                repeat={Infinity}
-              />
-              <span className='mb-[50px]'>You can call me Cyber Wraith</span>
-            </div>
-            <div className='flex flex-col md:flex-row gap-[20px] md:gap-[50px] text-smm'>
-              <button className='button bg-blue hover:bg-lblue'>
-                <a
-                  href={admin?.resume}
-                  download='Resume-PDF-document'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Download My Resume
-                </a>
-              </button>
-              <button
-                className='button border-2 border-blue text-blue hover:bg-blue hover:text-white'
-                disabled={admin?.blogUrl === undefined ? true : false}
-              >
-                <a href={admin?.blogUrl}> Explore My Blog</a>
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div className='text-white flex flex-col gap-[30px] items-center'>
-            <span className='font-semibold text-3xl'>Hello!</span>
+        <div className='text-white md:top-[331px] flex flex-col gap-[30px] items-center'>
+          <div className='w-[209px] md:w-[700px] flex flex-col gap-5 items-center text-center'>
+            <span className='font-semibold text-2xl md:text-3xl '>Hello!</span>
             <TypeAnimation
               sequence={[
-                "I'm OgeneKaro Akusu",
+                `I'm ${admin?.name}`,
                 2000,
-                "I'm a CyberSecurity Analyst",
+                `I'm a ${admin?.profession}`,
                 2000,
               ]}
               wrapper='span'
-              className='font-semibold text-3xl'
-              speed={50}
+              className='font-semibold text-2xl md:text-3xl'
+              speed={30}
               repeat={Infinity}
             />
             <span className='mb-[50px]'>You can call me Cyber Wraith</span>
-            <div className='flex gap-[50px] text-smm'>
-              <button className='button'>Explore My Blog</button>
-            </div>
           </div>
-        )}
-        <Link to={"about"} smooth={true} duration={500}>
+          <div className='flex flex-col md:flex-row gap-[20px] md:gap-[50px] text-smm'>
+            <button className='button bg-blue hover:bg-lblue'>
+              <a
+                href={admin?.resume}
+                download='Resume-PDF-document'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Download My Resume
+              </a>
+            </button>
+            <button
+              className='button border-2 border-blue text-blue hover:bg-blue hover:text-white'
+              disabled={admin?.blogUrl === undefined ? true : false}
+            >
+              <a href={admin?.blogUrl}> Explore My Blog</a>
+            </button>
+          </div>
+        </div>
+
+        <Link to={"about"} smooth={true} duration={500} className=''>
           <motion.div
             variants={bounceArrow()}
             initial='hidden'
             animate='show'
-            // initial={{ y: -30, opacity: 0 }}
-            // animate={{ y: 0, opacity: 1 }}
-            // transition={{
-            //   type: "spring",
-            //   stiffness: 100,
-            //   repeat: Infinity,
-            //   delay: 1,
-            //   duration: 3.5,
-            //   ease: [0.25, 0.25, 0.25, 0.75],
-            // }}
-            // viewport={{ once: false }}
-            className='absolute bottom-5 anima te-bounce flex-col flex-end'
+            className='flex-col absolute bottom-5 '
           >
-            <img src={arrow} alt='arrow' className='text-white w-6' />
-            <img src={arrow} alt='arrow' className='text-white w-6' />
-            <img src={arrow} alt='arrow' className='text-white w-6' />
+            <img src={arrow} alt='arrow' className='text-white w-3 md:w-6' />
+            <img src={arrow} alt='arrow' className='text-white w-3 md:w-6' />
+            <img src={arrow} alt='arrow' className='text-white w-3 md:w-6' />
           </motion.div>
         </Link>
       </div>

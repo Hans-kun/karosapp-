@@ -84,10 +84,10 @@ const Navbar = () => {
           </a>
         </ul>
       </div>
-      {/* ) : ( */}
-      {/* <div className='fixed top-0'> */}
+
+      {/* small and medium screens */}
       <div
-        className={`lg:hidden flex justify-between fixed top-0 left-0 right-0 align-center px-[30px] md:px-[50px] py-[10px] ${
+        className={`lg:hidden flex justify-between fixed top-0 left-0 right-0 px-[30px] md:px-[50px] py-[10px] ${
           colorChange ? " bg-black" : ""
         }`}
       >

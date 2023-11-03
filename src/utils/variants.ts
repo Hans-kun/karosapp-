@@ -83,6 +83,7 @@ export const bounceArrow = () => {
     },
     show: {
       y: 0,
+      x: 0,
       transition: {
         // type: "spring",
         // stiffness: 100,
