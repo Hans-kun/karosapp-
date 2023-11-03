@@ -28,7 +28,7 @@ const Home: React.FC = () => {
     <div className='bg-bg-img bg-no-repeat bg-cover conatiner w-full' id='home'>
       <div className='flex flex-col h-screen justify-center items-center'>
         <div className='text-white md:top-[331px] flex flex-col gap-[30px] items-center'>
-          <div className='w-[209px] md:w-[700px] flex flex-col gap-5 items-center text-center'>
+          <div className='w-[209px] md:w-[700px] flex flex-col gap-5 text-center'>
             <span className='font-semibold text-2xl md:text-3xl '>Hello!</span>
             <TypeAnimation
               sequence={[
@@ -64,12 +64,12 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <Link to={"about"} smooth={true} duration={500} className=''>
+        <Link to={"about"} smooth={true} duration={500}>
           <motion.div
             variants={bounceArrow()}
             initial='hidden'
             animate='show'
-            className='flex-col absolute bottom-5 '
+            className='flex-col absolute bottom-5 left-[49%]'
           >
             <img src={arrow} alt='arrow' className='text-white w-3 md:w-6' />
             <img src={arrow} alt='arrow' className='text-white w-3 md:w-6' />
